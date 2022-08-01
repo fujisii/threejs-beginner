@@ -1,3 +1,5 @@
 import * as THREE from "three";
 
-console.log(THREE);
+let scene;
+
+scene = new THREE.Scene();
