@@ -18,3 +18,6 @@ renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 renderer.render(scene, camera);
+
+// ジオメトリを作成(球体のジオメトリ)
+let ballGeometry = new THREE.SphereGeometry(100, 64 ,32);
