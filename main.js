@@ -28,5 +28,10 @@ let ballMaterial = new THREE.MeshPhysicalMaterial();    // 光源を必要とす
 let ballMesh = new THREE.Mesh(ballGeometry, ballMaterial);
 scene.add(ballMesh);
 
+// 平行光源を追加してみよう
+let directionalLight = new THREE.DirectionalLight(0xffffff, 2); // 「0x」とは「これから16進数で書きますよ」という意味
+directionalLight.position.set(1, 1, 1);
+scene.add(directionalLight);
+
 // レンダリングしてみよう
 renderer.render(scene, camera);
