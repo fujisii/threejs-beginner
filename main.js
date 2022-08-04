@@ -12,6 +12,7 @@ camera = new THREE.PerspectiveCamera(
     0.1, // カメラの開始距離
     1000 // カメラの終了距離
 );
+camera.position.set(0, 0, +500);
 
 // レンダラーを追加
 renderer = new THREE.WebGLRenderer({alpha: true});
@@ -21,10 +22,11 @@ renderer.render(scene, camera);
 
 // ジオメトリ（3Dオブジェクト）を作成
 let ballGeometry = new THREE.SphereGeometry(100, 64 ,32);   // 球体のジオメトリ
-
 // マテリアル(材質)を作成
 let ballMaterial = new THREE.MeshPhysicalMaterial();    // 光源を必要とするマテリアル
-
 // メッシュ化してみよう
 let ballMesh = new THREE.Mesh(ballGeometry, ballMaterial);
 scene.add(ballMesh);
+
+// レンダリングしてみよう
+renderer.render(scene, camera);
