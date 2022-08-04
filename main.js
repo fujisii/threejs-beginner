@@ -19,5 +19,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
-// ジオメトリを作成(球体のジオメトリ)
-let ballGeometry = new THREE.SphereGeometry(100, 64 ,32);
+// ジオメトリ（3Dオブジェクト）を作成
+let ballGeometry = new THREE.SphereGeometry(100, 64 ,32);   // 球体のジオメトリ
+
+// マテリアル(材質)を作成
+let ballMaterial = new THREE.MeshPhysicalMaterial();    // 光源を必要とするマテリアル
