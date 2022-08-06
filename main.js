@@ -33,10 +33,17 @@ let directionalLight = new THREE.DirectionalLight(0xffffff, 2); // 「0x」と�
 directionalLight.position.set(1, 1, 1);
 scene.add(directionalLight);
 
+// MEMO: 平行光源のヘルパーは「DirectionalLightHelper」
+
 // ポイント光源を追加してみよう
 pointLight = new THREE.PointLight(0xffffff, 1);
 pointLight.position.set(-200, -200, -200);
 scene.add(pointLight);
+
+// ポイント光源がどこにあるのかを特定する
+let pointLightHelper = new THREE.PointLightHelper(pointLight, 30);
+scene.add(pointLightHelper);
+
 
 // レンダリングしてみよう
 renderer.render(scene, camera);
