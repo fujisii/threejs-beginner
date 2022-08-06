@@ -18,6 +18,7 @@ camera.position.set(0, 0, +500);
 // レンダラーを追加
 renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
