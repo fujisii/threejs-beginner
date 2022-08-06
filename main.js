@@ -21,10 +21,14 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
+// テクスチャを追加してみよう
+let texture = new THREE.TextureLoader().load("./textures/earth.jpeg");
+
+
 // ジオメトリ（3Dオブジェクト）を作成
 let ballGeometry = new THREE.SphereGeometry(100, 64 ,32);   // 球体のジオメトリ
 // マテリアル(材質)を作成
-let ballMaterial = new THREE.MeshPhysicalMaterial();    // 光源を必要とするマテリアル
+let ballMaterial = new THREE.MeshPhysicalMaterial({ map: texture });    // 光源を必要とするマテリアル
 // メッシュ化してみよう
 let ballMesh = new THREE.Mesh(ballGeometry, ballMaterial);
 scene.add(ballMesh);
