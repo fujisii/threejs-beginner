@@ -56,7 +56,19 @@ function init() {
     // マウス操作ができるようにしよう
     controls = new OrbitControls(camera, renderer.domElement);
 
+    window.addEventListener("resize", onWindowResize);
+
     animate();
+}
+
+// ブラウザのリサイズに対応させよう
+function onWindowResize() {
+    // レンダラーのサイズを随時更新
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // カメラのアスペクト比を正す
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();    // プロパティの変更を有効にする
 }
 
 function animate() {
