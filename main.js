@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls";
+import earthImageUrl from "./textures/earth.jpeg";
 
 let scene, camera, renderer, pointLight, controls;
 
@@ -26,7 +27,7 @@ function init() {
     renderer.render(scene, camera);
 
     // テクスチャを追加してみよう
-    let texture = new THREE.TextureLoader().load("./textures/earth.jpeg");
+    let texture = new THREE.TextureLoader().load(earthImageUrl);
 
 
     // ジオメトリ（3Dオブジェクト）を作成
