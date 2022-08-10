@@ -1,4 +1,4 @@
-# threejs-beginner
+# threejs-earth
 
 ## Quickstart
 
