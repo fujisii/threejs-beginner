@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls";
-import earthImageUrl from "./textures/earth.jpeg";
+import earthImageUrl from "./textures/earth.jpeg?url";
 
 let scene, camera, renderer, pointLight, controls;
 
