@@ -2,7 +2,7 @@
   "name": "threejs-earth",
   "homepage": "https://fujisii.github.io/threejs-earth/",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
